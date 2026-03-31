@@ -1,5 +1,7 @@
 # hardware_emergency_trigger
 
+Source: [github.com/savitashukla/hardware_emergency_trigger](https://github.com/savitashukla/hardware_emergency_trigger)
+
 **Android-only** Flutter plugin that listens to **hardware volume keys globally** using an `AccessibilityService`. It detects **single, double, triple, and long-press** patterns, can **bring the app to the foreground** from the background, and can trigger an **emergency call or dialer** on triple press.
 
 On **iOS and other platforms** this plugin does nothing (no-op).

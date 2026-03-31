@@ -3,9 +3,9 @@ description: >
   Android-only plugin: global volume key patterns (single/double/triple/long press)
   via AccessibilityService, optional emergency dial, and Flutter EventChannel events.
 version: 0.0.1
-homepage: https://github.com/YOUR_USERNAME/hardware_emergency_trigger
-repository: https://github.com/YOUR_USERNAME/hardware_emergency_trigger
-issue_tracker: https://github.com/YOUR_USERNAME/hardware_emergency_trigger/issues
+homepage: https://github.com/savitashukla/hardware_emergency_trigger
+repository: https://github.com/savitashukla/hardware_emergency_trigger.git
+issue_tracker: https://github.com/savitashukla/hardware_emergency_trigger/issues
 
 environment:
   sdk: ^3.8.1
