@@ -8,6 +8,11 @@ On **iOS and other platforms** this plugin does nothing (no-op).
 
 ---
 
+See how double volume press launches app and triple press triggers emergency call.
+
+▶ YouTube Demo: https://youtube.com/shorts/sH8lSZ--uQo?feature=share
+
+
 ## Why this plugin?
 
 - Normal Flutter apps **cannot** read volume keys when the app is in the background or killed.
