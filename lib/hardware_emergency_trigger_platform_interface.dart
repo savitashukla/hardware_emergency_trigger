@@ -37,5 +37,25 @@ abstract class HardwareEmergencyTriggerPlatform extends PlatformInterface {
   Stream<HardwareEmergencyEvent> get events {
     throw UnimplementedError('events has not been implemented.');
   }
+
+  /// Start audio recording.
+  ///
+  /// [outputDirectory] – optional absolute path to save the file.
+  /// [fileName] – optional file name without extension.
+  ///
+  /// Returns the absolute path of the output file.
+  Future<String?> startAudioRecording({
+    String? outputDirectory,
+    String? fileName,
+  }) {
+    throw UnimplementedError('startAudioRecording() has not been implemented.');
+  }
+
+  /// Stop the current audio recording.
+  ///
+  /// Returns the absolute path of the saved file.
+  Future<String?> stopAudioRecording() {
+    throw UnimplementedError('stopAudioRecording() has not been implemented.');
+  }
 }
 

@@ -51,5 +51,24 @@ class MethodChannelHardwareEmergencyTrigger
         .asBroadcastStream();
     return _cachedEvents!;
   }
+
+  @override
+  Future<String?> startAudioRecording({
+    String? outputDirectory,
+    String? fileName,
+  }) {
+    return methodChannel.invokeMethod<String>(
+      'startAudioRecording',
+      {
+        if (outputDirectory != null) 'outputDirectory': outputDirectory,
+        if (fileName != null) 'fileName': fileName,
+      },
+    );
+  }
+
+  @override
+  Future<String?> stopAudioRecording() {
+    return methodChannel.invokeMethod<String>('stopAudioRecording');
+  }
 }
 

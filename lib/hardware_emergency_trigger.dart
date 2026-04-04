@@ -36,7 +36,7 @@ class HardwareEmergencyTrigger {
       HardwareEmergencyKey.volumeDown,
     },
   }) {
-    return _platform.initialize(
+     return _platform.initialize(
       debounceMs: debounceMs,
       enableBackgroundLaunch: enableBackgroundLaunch,
       emergencyNumber: emergencyNumber,
@@ -78,6 +78,39 @@ class HardwareEmergencyTrigger {
           break;
       }
     });
+  }
+
+  // ── Audio Recording ────────────────────────────────────────────────────
+
+  /// Start audio recording via the device microphone.
+  ///
+  /// [outputDirectory] – optional absolute path to the directory where the
+  /// audio file should be saved. Defaults to the app's external files /Music
+  /// directory on Android.
+  ///
+  /// [fileName] – optional name for the audio file, without extension.
+  /// Defaults to a timestamp-based name like `rec_20260404_120000`.
+  ///
+  /// Returns the absolute path of the output `.m4a` file, or `null` on error.
+  ///
+  /// **Note:** Make sure `RECORD_AUDIO` permission is granted before calling
+  /// this method (e.g. via the `permission_handler` package).
+  static Future<String?> startAudioRecording({
+    String? outputDirectory,
+    String? fileName,
+  }) {
+    return _platform.startAudioRecording(
+      outputDirectory: outputDirectory,
+      fileName: fileName,
+    );
+  }
+
+  /// Stop the current audio recording.
+  ///
+  /// Returns the absolute path of the saved `.m4a` file, or `null` if no
+  /// recording was in progress.
+  static Future<String?> stopAudioRecording() {
+    return _platform.stopAudioRecording();
   }
 }
 
